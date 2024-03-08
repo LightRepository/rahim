@@ -1,0 +1,46 @@
+
+
+
+.main__heading{
+    border-top: 5px solid #FFFDFD;
+    border-bottom: 5px solid #FFFDFD;
+}
+
+.main__heading > h1{
+font-family: 'Domine';
+font-size: 90px;
+text-align: center;
+color: #FFFDFD;
+padding: 40px 0;
+}
+
+.main__block-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 45px 0;
+}
+
+.block-about__text {
+font-family: 'Open Sans';
+font-size: 30px;
+line-height: 35px;
+color: #FFFFFF;
+max-width: 996px;
+margin-bottom: 150px;
+}
+
+.block-about__text>ul>li{
+    list-style: inside;
+    }
+
+.block-about__text>ul{
+   margin-bottom: 15px;
+    }
+.block-about__text>p{
+    margin-top: 15px;
+     }
+.block-about__img > img{
+    width: 495px;
+    height: 519px;
+}
