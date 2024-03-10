@@ -28,6 +28,8 @@ Route::post('/auth', [authController::class, "store"])->name("auth.store");
 Route::get('/auth', [authController::class, "index"])->name("auth");
 
 
+
+Route::post('/cart/over', [cartController::class, "over"])->name("cart.over");
 Route::post('/cart/add', [cartController::class, "store"])->name("cart.store");
 Route::get('/cart', [cartController::class, "index"])->name("cart");
 

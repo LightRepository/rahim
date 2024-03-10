@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart_for_users;
+use App\Models\cart_full;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,18 @@ class cartController extends Controller
             'user_id' => $user_id,
             'product_id' => $product_id,
         ]);
-        return response("$product_id");
+        return response("Успешно");
+    }
+
+    public function over(Request $request){
+        $email = Auth::user()->email;
+        foreach ($request->get("products") as $item) {
+            cart_full::query()->create([
+                "email" => $email,
+                "product" => $item
+            ]);
+        }
+        Cart_for_users::query()->where("user_id", "=" , Auth::id())->delete();
+        return response(201);
     }
 }

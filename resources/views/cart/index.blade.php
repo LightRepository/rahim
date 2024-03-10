@@ -17,6 +17,13 @@
                 </div>
             @endforeach
         </div>
+        <div class="cart_btn">
+            <input type="button" name="btn_cart" class="cart__btn"  value="Заказать">
+        </div>
     </div>
 
+@endsection
+
+@section("js")
+    <script src="{{url("js/cart.js")}}"></script>
 @endsection
